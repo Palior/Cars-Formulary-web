@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Formulario autos</title>
+</head>
+<body>
+<h1>A continuacion ingrese los datos solicitados: </h1>
+<br>
+<form name="formulario" method="get" action="auto.php">
+<table border="2" align="left">
+<caption>Datos Automovil</caption>
+<tr>
+<td>Matricula: </td>
+<td><input type="text" name="matricula" size="20"></td>
+</tr>
+<tr>
+<td>Serial del motor: </td>
+<td><input type="text" name="serialMotor" size="20"></td>
+</tr>
+<tr>
+<td>Serial de carroceria: </td>
+<td><input type="text" name="serialCarroceria" size="20"></td>
+</tr>
+<tr>
+<td>Marca: </td>
+<td><input type="text" name="marca" size="20"></td>
+</tr>
+<tr>
+<td>Modelo: </td>
+<td><input type="text" name="modelo" size="20"></td>
+</tr>
+<tr>
+<td>Año: </td>
+<td><input type="text" name="anio" size="20"></td>
+</tr>
+<tr>
+<td>Color: </td>
+<td><input type="text" name="color" size="20"></td>
+</tr>
+<tr>
+<td>Precio: </td>
+<td><input type="text" name="precio" size="20"></td>
+</tr>
+<tr>
+<td align="center"><input type="submit" name="enviar" value="Enviar"></td>
+<td align="center"><input type="reset" name="cancelar" value ="Cancelar"></td>
+</tr>
+</table>
+</form>
+<script>
+    function validar(){
+    const patente = document.getElementById("matricula").value;
+    const ano = document.getElementById("anio").value;
+    if(patente.lenght>=6){
+    return true;
+    }else{
+    alert("La patente ingresada debe tener minimo 6 caracteres")
+    return false;
+    }
+    if(ano.lenght>=4){
+    return true;
+    }else{
+    alert("Favor ingresar un Año valido de 4 digitos")
+    return false;
+    }
+    }
+</script>
+</body>
+</html>
